@@ -1,7 +1,7 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
 
-// macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
+// O Seatbelt do macOS bloqueia FSEvents, então as prévias do Codex precisam de polling para HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
@@ -12,13 +12,13 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
-  // Keep Wrangler and Miniflare state project-local. These are non-secret tool
-  // settings; application environment belongs in ignored `.env*` files.
+  // Mantém o estado do Wrangler e do Miniflare dentro do projeto. Estas são
+  // configurações não secretas; variáveis do app ficam em arquivos `.env*` ignorados.
   process.env.WRANGLER_WRITE_LOGS ??= "false";
   process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
-  // Wrangler snapshots its log path while the Cloudflare plugin is imported.
+  // O Wrangler captura o caminho de logs enquanto o plugin da Cloudflare é importado.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
