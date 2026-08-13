@@ -8,7 +8,7 @@ Acompanhe receitas, despesas, categorias, metas e relatórios em um dashboard fi
 
 <br>
 
-[![Demo](https://img.shields.io/badge/🌐_Acessar_Demo-Adicionar_Link-16A34A?style=for-the-badge)](https://meu-dinheiro-mauve.vercel.app/)
+[![Demo](https://img.shields.io/badge/🌐_Acessar_Demo-Link-16A34A?style=for-the-badge)](https://meu-dinheiro-mauve.vercel.app/)
 
 <br>
 
